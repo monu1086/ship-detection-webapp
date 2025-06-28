@@ -1,0 +1,9 @@
+# YOLOv8 configuration file for HRSC2016 dataset
+path: ../data/hrsc2016  # Root path to dataset (relative to train_yolo.py)
+train: images/train  # Path to training images
+val: images/val  # Path to validation images
+nc: 3  # Number of classes
+names:  # Class names for ship types
+  - cargo
+  - tanker
+  - fishing
