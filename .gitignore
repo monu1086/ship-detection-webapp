@@ -1,1 +1,37 @@
+# Python template defaults
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+*.pid
+*.seed
+*.whl
+*.tar.gz
+*.bak
+*.swp
+*~
+*.ipynb_checkpoints/
 
+# Project-specific exclusions
+data/                       # Exclude HRSC2016 or Shipsnet dataset
+*.pt                        # Exclude YOLOv8 model weights
+detections.db               # Exclude SQLite database
+app/static/images/*.jpg     # Exclude large image files (optional)
+app/static/images/*.png     # Exclude large image files (optional)
+*.h5                        # Exclude other model weights (if used)
+*.tflite                    # Exclude TensorFlow Lite models (if used)
+
+# OS-specific files
+.DS_Store                   # macOS
+Thumbs.db                   # Windows
