@@ -3,7 +3,7 @@ A real-time ship detection and classification web application using YOLOv8, Flas
 Real-Time Ship Detection and Classification Web Application
 # Real-Time Ship Detection and Classification Web Application
 
-![Ship Detection Demo](app/static/images/demo_screenshot.png)
+
 
 [![Python](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org)
 [![Flask](https://img.shields.io/badge/Flask-2.3.3-green)](https://flask.palletsprojects.com)
