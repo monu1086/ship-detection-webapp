@@ -35,8 +35,3 @@ Developed as a capstone project during my B.Tech (4th year), this showcases my p
 - Docker (optional, for containerized deployment)
 - HRSC2016 dataset (or Shipsnet, downloadable via Kaggle)
 
-### Steps
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/monu1086/ship-detection-webapp.git
-   cd ship-detection-webapp
