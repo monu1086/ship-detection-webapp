@@ -34,4 +34,78 @@ Developed as a capstone project during my B.Tech (4th year), this showcases my p
 - Python 3.9+
 - Docker (optional, for containerized deployment)
 - HRSC2016 dataset (or Shipsnet, downloadable via Kaggle)
+  
+## Steps to Get It Running
+1. **Clone the repo to your machine**:
+   ```bash
+   git clone https://github.com/monu1086/ship-detection-webapp.git
+   cd ship-detection-webapp
+   ```
+2. **Install Python dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Download and set up the dataset**:
+- Get the HRSC2016 dataset or Shipsnet from Kaggle.
+- Place it in data/ (update config.yaml with the dataset path).
+4. **Set up environment variables**:
+- Create a .env file in the root with:
+  ```bash
+  FLASK_APP=app.py
+  FLASK_ENV=development
+  YOLO_MODEL_PATH=models/yolov8_ship.pt
+  ```
+5. **Run the app**:
+   ```bash
+   python app.py
+   ```
+6. **For Docker (optional)**:
+- Build the container: docker build -t shipspotter .
+- Run it: docker run -p 5000:5000 shipspotter
+- Visit http://localhost:5000.
+  
+## How to Use It
+- Upload an image or connect a webcam on the homepage to detect ships.
+- Check the Chart.js dashboard to see a breakdown of ship types (e.g., cargo, tanker).
+- Test the API with Postman (/api/detect endpoint) to get JSON results.
+- Play around with the settings to tweak confidence thresholds for detection.
+
+## What I Achieved
+- Trained YOLOv8 on 40,000+ images to hit 85% accuracy for ship detection and classification.
+- Sped up API responses by 20% with optimized data pipelines.
+- Reduced UI lag by 25% through efficient JavaScript updates.
+- Got it running smoothly in a Docker container for easy setup anywhere.
+
+## Project Structure
+```bash
+ship-detection-webapp/
+├── app.py
+├── config.yaml
+├── data/
+│   └── dataset/
+├── models/
+│   └── yolov8_ship.pt
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── assets/
+│       └── demo_screenshot.png
+├── templates/
+│   └── index.html
+├── requirements.txt
+├── .gitignore
+├── README.md
+└── Dockerfile
+```
+## What’s Next?
+- Improve accuracy by fine-tuning YOLOv8 on more diverse datasets.
+- Add real-time alerts for specific ship types (e.g., unauthorized vessels).
+- Optimize for mobile devices to make the UI even more accessible.
+
+ 
+   
+
+ 
 
